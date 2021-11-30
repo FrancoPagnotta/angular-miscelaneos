@@ -34,7 +34,7 @@ import { UsuarioNuevoComponent } from './components/usuario/usuario-nuevo.compon
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,11 @@
-<p>usuario works!</p>
+<div class="row m-5">
+	<div class="col-md-12 text-center">
+		<div class="btn-group" role="group" aria-label="Basic outlined example">
+		  <button [routerLink]=" ['nuevo'] " routerLinkActive="active" type="button" class="btn btn-outline-primary"> Nuevo </button>
+		  <button [routerLink]=" ['editar'] " routerLinkActive="active" type="button" class="btn btn-outline-primary mx-2"> Editar </button>
+		  <button [routerLink]=" ['detalle'] " routerLinkActive="active" type="button" class="btn btn-outline-primary"> Detalle </button>
+		</div>
+	</div>
+</div>
+
+<router-outlet></router-outlet>

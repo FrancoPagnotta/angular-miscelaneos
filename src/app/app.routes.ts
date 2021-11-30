@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { Component, OnInit } from '@angular/core';
-import  { UsuarioComponent } from './components/usuario/usuario.component'
-
+import  { UsuarioComponent } from './components/usuario/usuario.component';
+import { USER_ROUTES } from './components/usuario/usuario.routes';
 @Component({
 	selector: 'selector-name',
 	template: ``
-})
+}) 
 
 export class NameComponent implements OnInit {
 	constructor() { }
@@ -16,7 +16,11 @@ export class NameComponent implements OnInit {
 
 const APP_ROUTES: Routes = [
 	{ path: 'home', component: HomeComponent },
-	{ path: 'usuario', component: UsuarioComponent },
+	{ 
+		path: 'usuario/:id', 
+		component: UsuarioComponent,
+		children: USER_ROUTES
+	},
 	{ path: '**', pathMatch: 'full', redirectTo: 'home' },
 ]
 
